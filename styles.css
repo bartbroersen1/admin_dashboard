@@ -1,1 +1,24 @@
 @import "./modern-normalize.css";
+
+.container {
+    display: grid;
+    grid: "sidebar header" 1fr
+    "sidebar mainContent" 1fr
+    / 1fr 4fr;
+}
+
+.container > * {
+    border: 1px solid black;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.mainContent {
+    grid-area: mainContent;
+}
