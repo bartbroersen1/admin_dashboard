@@ -11,12 +11,70 @@
     border: 1px solid black;
 }
 
+ul, li {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .header {
     grid-area: header;
 }
 
 .sidebar {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: .6rem;
+    color: white;
+    background-color: blue;
+    padding: 15px;
+    padding-right: 30px;
+
     grid-area: sidebar;
+    display: grid;
+    grid: "title title" auto
+    ". ." 10px
+    "icon menu" auto
+    "icon menu" auto
+    "icon menu" auto
+    "icon menu" auto
+    "icon menu" auto
+    "icon menu" auto
+    ". ." 10px
+    "icon2 menu2" auto
+    "icon2 menu2" auto
+    "icon2 menu2" auto /
+    1fr 3fr;
+    gap: 10px
+}
+
+.sidebar > i, .sidebar > div {
+    font-size: .8rem;
+    font-weight: 800;
+    align-content: end;
+}
+
+.sidebar ul {
+    display: grid;
+    grid-template-rows: subgrid;
+}
+
+.sidebar .menu1 {
+    grid-area: menu;
+}
+
+.sidebar .icons1 {
+    grid-area: icon;
+    justify-content: center;
+}
+
+.sidebar .menu2 {
+    grid-area: menu2;
+}
+
+.sidebar .icons2 {
+    grid-area: icon2;
+    justify-content: center;
 }
 
 .mainContent {
