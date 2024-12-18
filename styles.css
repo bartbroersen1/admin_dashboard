@@ -163,4 +163,25 @@ ul, li {
 
     background-color: #ccc;
     z-index: -1;
+
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+}
+
+.mainContent .projectContainer {
+    grid-row: 1 / 3;
+}
+
+.mainContent .announcementContainer {
+    grid-column: 2;
+}
+
+.mainContent .trendingContainer {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.mainContent > div > div {
+    background-color: white;
+    border-radius: 20px;
 }
